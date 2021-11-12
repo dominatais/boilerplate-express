@@ -40,5 +40,11 @@ app.get('/:word/echo', (req, res) => {
   res.json({echo: word});
 })
 
+app.get('/name', (req, res) => {
+  console.log(req.query);
+  http://localhost:3000/name?first=Joe&last=Doe
+  res.json({name: `${req.query.first} ${req.query.last}`});
+})
+
 // http://localhost:3000
 module.exports = app;
