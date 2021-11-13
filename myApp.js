@@ -3,7 +3,7 @@ require('dotenv').config();
 var express = require('express');
 var app = express();
 
-bodyParser.urlencoded({extended: false});
+app.use(bodyParser.urlencoded({extended: false}));
 console.log('Hello World');
 app.use('/public', express.static(__dirname + '/public'));
 app.use((req, res, next) => {
