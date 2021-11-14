@@ -49,10 +49,11 @@ app.get('/name', (req, res) => {
   res.json({name: `${req.query.first} ${req.query.last}`});
 })
 
-app.post('/library', (req, res) => {
-  console.log(req.query);
+app.post('/name', (req, res) => {
+  // console.log(req.query);
+  // console.log(req.body);
   // http://localhost:3000/library?firstname=John&lastname=Doe
-  res.json({name: `${req.query.firstname} ${req.query.lastname}`});
+  res.json({name: `${req.body.first} ${req.body.last}`});
 })
 
 // http://localhost:3000
