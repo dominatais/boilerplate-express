@@ -45,8 +45,14 @@ app.get('/:word/echo', (req, res) => {
 
 app.get('/name', (req, res) => {
   console.log(req.query);
-  http://localhost:3000/name?first=Joe&last=Doe
+  // http://localhost:3000/name?first=Joe&last=Doe
   res.json({name: `${req.query.first} ${req.query.last}`});
+})
+
+app.post('/library', (req, res) => {
+  console.log(req.query);
+  // http://localhost:3000/library?firstname=John&lastname=Doe
+  res.json({name: `${req.query.firstname} ${req.query.lastname}`});
 })
 
 // http://localhost:3000
